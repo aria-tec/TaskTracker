@@ -1,0 +1,45 @@
+[package]
+name = "task-tracker"
+version = "0.1.0"
+edition = "2021"
+authors = ["Antigravity Developer"]
+description = "Task Tracker CLI and Axum REST API backend in Rust"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/arias/roadmap-backend-rust"
+keywords = ["task", "tracker", "cli", "axum", "todo"]
+categories = ["command-line-utilities", "web-programming::http-server"]
+
+[lib]
+name = "task_tracker"
+path = "src/lib.rs"
+
+[[bin]]
+name = "task-cli"
+path = "src/bin/task_cli.rs"
+
+[[bin]]
+name = "task-server"
+path = "src/bin/task_server.rs"
+
+[dependencies]
+# Web framework & Async Runtime
+axum = "0.8"
+tokio = { version = "1.43", features = ["full"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+
+# Serialization & Datetime
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+# Diagnostics & Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.1"
+tempfile = "3.17"
+reqwest = { version = "0.12", features = ["json"] }

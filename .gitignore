@@ -1,0 +1,11 @@
+# Rust build target
+/target
+
+# Temporary, swap, and OS files
+.DS_Store
+*.swp
+*.tmp
+*.log
+
+# Runtime local data
+tasks.json
