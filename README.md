@@ -2,6 +2,8 @@
 
 A robust, production-grade task tracking application written in Rust, featuring both a fast Command-Line Interface (`task-cli`) and an asynchronous REST API service built with [Axum](https://docs.rs/axum) (`task-server`). All tasks are stored persistently in a human-readable JSON file (`tasks.json`) with atomic write guarantees.
 
+> **Roadmap.sh Project Reference**: https://roadmap.sh/projects/task-tracker
+
 ---
 
 ## Features
