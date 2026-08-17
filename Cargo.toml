@@ -43,3 +43,14 @@ assert_cmd = "2.0"
 predicates = "3.1"
 tempfile = "3.17"
 reqwest = { version = "0.12", features = ["json"] }
+
+[lints.clippy]
+all = "deny"
+correctness = "deny"
+suspicious = "deny"
+style = "deny"
+complexity = "deny"
+perf = "deny"
+pedantic = "deny"
+nursery = "deny"
+cargo = "deny"
